@@ -23,7 +23,7 @@ const App = () => {
         createUserDocumentFromAuth(user);
       }
       const pickedUser =
-        user && (({ accessToken, email }) => ({ accessToken, email }(user)));
+        user && (({ accessToken, email }) => ({ accessToken, email }))(user);
       dispatch(setCurrentUser(pickedUser));
     });
 
